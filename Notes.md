@@ -58,7 +58,7 @@ An `task` one of the steps needed to complete the project. We want to store the 
 -task_completed (boolean - default false)
 
 ## project_resources
--project_detail_id
+-project_resource_id
 -project_id *foreign id*
 -resource_id *foreign id*
 
