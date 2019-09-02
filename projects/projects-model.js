@@ -11,15 +11,15 @@ module.exports = {
 }
 
 function getResources() {
-
+    return db('resources')
 }
 
 function getProjects() {
-
+     return db('projects')
 }
 
 function getTasks() {
-
+    return db('tasks')
 }
 
 function addResource(resource_obj) {
