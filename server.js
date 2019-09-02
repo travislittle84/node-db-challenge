@@ -56,6 +56,36 @@ server.get('/api/projects/tasks', (req, res) => {
         })
 })
 
+server.post('/api/projects', (req, res) => {
+    Projects.addProject(req.body)
+        .then(totalProjectCount => {
+            res.status(201).json({ message: "Project added", "Total project count": totalProjectCount})
+        })
+        .catch(error => {
+            res.status(500).json({ message: "Error adding project" })
+        })
+})
+
+server.post('/api/projects/tasks', (req, res) => {
+    Projects.addTask(req.body)
+        .then(totalTaskCount => {
+            res.status(201).json({ message: "Task added", "Total Task Count": totalTaskCount})
+        })
+        .catch(error => {
+            res.status(500).json({ message: "Error adding task" })
+        })
+})
+
+server.post('/api/projects/resources', (req, res) => {
+    Projects.addResource(req.body)
+        .then(totalResourceCount => {
+            res.status(201).json({ message: "Resource added", "Total Resource Count": totalResourceCount})
+        })
+        .catch(error => {
+            res.status(500).json({ message: "Error adding resource" })
+        })
+})
+
 
 module.exports = server
 
