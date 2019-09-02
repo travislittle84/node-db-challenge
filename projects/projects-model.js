@@ -23,13 +23,16 @@ function getTasks() {
 }
 
 function addResource(resource_obj) {
-
+    return db('resources')
+        .insert(resource_obj)
 }
 
 function addProject(project_obj) {
-
+    return db('projects')
+        .insert(project_obj)
 }
 
-function addTask(project_id, task_obj) {
-
+function addTask(task_obj) {
+    return db('tasks')
+        .insert(task_obj)
 }
